@@ -1,0 +1,21 @@
+.mdpdf {
+  &-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    height: 90%;
+    padding: 1rem;
+
+    &-area {
+      border: 1px solid #004030;
+    }
+
+    &-generator {
+      border: 1px solid #004030;
+    }
+  }
+
+  &-md {
+    padding: 1rem;
+  }
+}
