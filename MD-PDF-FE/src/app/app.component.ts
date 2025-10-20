@@ -1,8 +1,8 @@
 import { Component, signal } from "@angular/core";
-import { MatToolbarModule } from "@angular/material/toolbar";
 import { MarkdownAreaComponent } from "./components/markdown-area/markdown-area.component";
 import { MarkdownGeneratorComponent } from "./components/markdown-generator/markdown-generator.component";
 import { MatButtonModule } from "@angular/material/button";
+import { ToolbarComponent } from "./components/toolbar/toolbar.component";
 
 @Component({
   selector: "app-root",
@@ -11,8 +11,8 @@ import { MatButtonModule } from "@angular/material/button";
   imports: [
     MarkdownAreaComponent,
     MarkdownGeneratorComponent,
-    MatToolbarModule,
     MatButtonModule,
+    ToolbarComponent,
   ],
 })
 export class App {
