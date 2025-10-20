@@ -57,3 +57,57 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+Check out the below markdown sample for reference.
+
+<!--
+## Example Content for Testing
+
+Use this section to verify markdown rendering, code blocks, tables, and lists inside the project.
+
+### Quick checklist
+- [ ] Render headings correctly
+- [ ] Render fenced code blocks with syntax highlighting
+- [ ] Render tables and lists
+- [ ] Display images and links
+
+### Example commands
+```bash
+# install dependencies and run dev server
+npm install
+ng serve --open
+```
+
+### Small Angular component example
+```typescript
+import { Component } from '@angular/core';
+
+@Component({
+    selector: 'app-sample',
+    template: `
+        <div class="sample">
+            <h3>Sample Component</h3>
+            <button (click)="onClick()">Click me</button>
+            <p>{{ message }}</p>
+        </div>
+    `
+})
+export class SampleComponent {
+    message = 'Hello from SampleComponent';
+
+    onClick(): void {
+        this.message = 'Button clicked at ' + new Date().toLocaleTimeString();
+    }
+}
+```
+
+### Test cases
+| Feature | Input | Expected output |
+|---|---:|---|
+| Dev server | ng serve | App served at http://localhost:4200 |
+| Component render | <app-sample> | Button and message visible |
+| Code block | ```typescript``` | Syntax highlighted block |
+
+### link
+
+Visit the Angular docs: https://angular.dev -->
