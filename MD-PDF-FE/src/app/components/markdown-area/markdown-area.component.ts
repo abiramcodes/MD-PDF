@@ -4,6 +4,7 @@ import { MatFormFieldModule } from "@angular/material/form-field";
 import { FormControl, FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { debounceTime, Subject, takeUntil } from "rxjs";
 import { MarkdownFacadeService } from "../../services/markdown-facade.service";
+import { marked } from "marked";
 
 @Component({
   selector: "app-markdown-area",
@@ -27,7 +28,11 @@ export class MarkdownAreaComponent implements OnInit, OnDestroy {
     this.markDownArea.valueChanges
       .pipe(debounceTime(300), takeUntil(this.unsubscribe$))
       .subscribe((html: string | null) => {
-        this.markdownFacadeService.setMarkdown(html);
+        if (html) {
+          this.markdownFacadeService.setMarkdown(html);
+          // try to render this with an iFrame tag.
+          console.log(marked.parse(html));
+        }
       });
   }
 

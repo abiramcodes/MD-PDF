@@ -39,7 +39,7 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 :root {
-  --mat-toolbar-standard-height: 3rem;
+  --mat-toolbar-standard-height: 4rem;
   @include mat.toolbar-overrides(
     (
       container-background-color: var(--mat-sys-primary),
