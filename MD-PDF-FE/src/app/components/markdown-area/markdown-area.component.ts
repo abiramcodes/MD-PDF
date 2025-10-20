@@ -17,7 +17,7 @@ import { MarkdownFacadeService } from "../../services/markdown-facade.service";
   styleUrl: "./markdown-area.component.scss",
 })
 export class MarkdownAreaComponent implements OnInit, OnDestroy {
-  protected textAreaRows = signal(30);
+  protected textAreaRows = signal(52);
   public markDownArea = new FormControl("");
 
   private readonly markdownFacadeService = inject(MarkdownFacadeService);
