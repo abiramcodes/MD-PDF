@@ -25,14 +25,16 @@ This is a solution for the "Markdown to PDF" coding challenge by John Crickett f
 
 ## Getting Started
 
-1.  cd MD-PDF-BE
+1.  **Start the Backend**:
+    Open a new terminal, navigate to the `MD-PDF-BE` directory, and run:
+
+    ```bash
+    cd MD-PDF-BE
     npm install
     npm run start:dev
-
     ```
+
     The backend will be running on `http://localhost:3000`.
-
-    ```
 
 2.  **Start the Frontend:**
     Open a new terminal, navigate to the `MD-PDF-FE` directory, and run:
