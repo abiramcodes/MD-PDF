@@ -1,4 +1,12 @@
 .mdpdf {
+  &-spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 90%;
+  }
+
   &-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -6,12 +14,18 @@
     height: 90%;
     padding: 1rem;
 
-    &-area {
+    .container-common {
+      max-height: 90dvh;
+      overflow: auto;
       border: 1px solid #004030;
     }
 
+    &-area {
+      @extend .container-common;
+    }
+
     &-generator {
-      border: 1px solid #004030;
+      @extend .container-common;
     }
   }
 
