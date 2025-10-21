@@ -2,12 +2,18 @@ import { Component, inject } from "@angular/core";
 import { MatButtonModule } from "@angular/material/button";
 import { PdfService } from "../../services/pdf.service";
 import { SnackbarService } from "../../services/snackbar.service";
+import { MarkdownFacadeService } from "../../services/markdown-facade.service";
 
 @Component({
   selector: "app-generate-pdf",
   imports: [MatButtonModule],
   template: `
-    <button matButton="tonal" color="primary" (click)="generatePDF()">
+    <button
+      matButton="tonal"
+      color="primary"
+      (click)="generatePDF()"
+      [disabled]="!markdownFacadeService.htmlString()"
+    >
       Generate PDF
     </button>
   `,
@@ -24,6 +30,7 @@ import { SnackbarService } from "../../services/snackbar.service";
 export class GeneratePDFComponent {
   private readonly pdfService = inject(PdfService);
   private readonly snackbarService = inject(SnackbarService);
+  protected readonly markdownFacadeService = inject(MarkdownFacadeService);
 
   public generatePDF(): void {
     this.pdfService.updateLoading(true);

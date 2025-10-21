@@ -38,9 +38,9 @@ export class MarkdownAreaComponent implements OnInit, OnDestroy {
     this.markDownArea.valueChanges
       .pipe(debounceTime(300), takeUntil(this.unsubscribe$))
       .subscribe((html: string | null) => {
-        if (html) {
-          this.markdownFacadeService.setMarkdown(html);
-        }
+        // if (html) {
+        this.markdownFacadeService.setMarkdown(html);
+        // }
       });
   }
 
