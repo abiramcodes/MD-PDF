@@ -9,13 +9,11 @@ This is a solution for the "Markdown to PDF" coding challenge by John Crickett f
 - **Live Markdown Preview**: See your rendered HTML as you type.
 - **PDF Generation**: Convert your markdown into a previewable PDF in a new tab.
 - **Syntax Highlighting**: Code blocks are styled using Prism.js, matching the frontend preview in the final PDF.
-- **Dockerized**: The entire application (frontend and backend) can be run easily with a single command using Docker Compose.
 
 ## Tech Stack
 
 - **Frontend**: Angular, Angular Material
 - **Backend**: NestJS, Puppeteer, marked.js, Prism.js
-- **Containerization**: Docker, Docker Compose
 
 ## Project Structure
 
@@ -23,7 +21,6 @@ This is a solution for the "Markdown to PDF" coding challenge by John Crickett f
 .
 ├── MD-PDF-BE/         # NestJS Backend
 ├── MD-PDF-FE/         # Angular Frontend
-└── docker-compose.yml # Docker Compose configuration
 ```
 
 ## Getting Started
@@ -32,9 +29,10 @@ This is a solution for the "Markdown to PDF" coding challenge by John Crickett f
     npm install
     npm run start:dev
 
-
     ```
     The backend will be running on `http://localhost:3000`.
+
+    ```
 
 2.  **Start the Frontend:**
     Open a new terminal, navigate to the `MD-PDF-FE` directory, and run:
