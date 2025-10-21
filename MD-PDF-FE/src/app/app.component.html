@@ -1,5 +1,12 @@
 <app-toolbar />
-<div class="mdpdf-container">
-  <app-markdown-area class="mdpdf-md mdpdf-container-area" />
-  <app-markdown-generator class="mdpdf-md mdpdf-container-generator" />
-</div>
+@if (isLoading()) {
+  <div class="mdpdf-spinner">
+    <mat-spinner></mat-spinner>
+  </div>
+} @else {
+  <div class="mdpdf-container">
+    @if (isLoading()) {}
+    <app-markdown-area class="mdpdf-md mdpdf-container-area" />
+    <app-markdown-generator class="mdpdf-md mdpdf-container-generator" />
+  </div>
+}

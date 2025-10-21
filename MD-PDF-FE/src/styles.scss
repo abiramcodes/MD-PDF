@@ -38,6 +38,9 @@ body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
+pre {
+  overflow-x: hidden !important;
+}
 :root {
   --mat-toolbar-standard-height: 4rem;
   @include mat.toolbar-overrides(

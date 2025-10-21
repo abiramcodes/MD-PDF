@@ -1,6 +1,7 @@
 import { Component, inject } from "@angular/core";
 import { MatButtonModule } from "@angular/material/button";
 import { PdfService } from "../../services/pdf.service";
+import { SnackbarService } from "../../services/snackbar.service";
 
 @Component({
   selector: "app-generate-pdf",
@@ -22,19 +23,35 @@ import { PdfService } from "../../services/pdf.service";
 })
 export class GeneratePDFComponent {
   private readonly pdfService = inject(PdfService);
+  private readonly snackbarService = inject(SnackbarService);
 
   public generatePDF(): void {
-    this.pdfService.generatePDF().subscribe((response: Blob) => {
-      this.downloadFile(response, "document.pdf");
+    this.pdfService.updateLoading(true);
+    this.pdfService.generatePDF().subscribe({
+      next: (data) => {
+        this.previewFile(data);
+        this.pdfService.updateLoading(false);
+        this.snackbarService.openSnackbar("PDF generated successfully!");
+      },
+      error: () => {
+        this.pdfService.updateLoading(false);
+        this.snackbarService.openSnackbar("Error generating PDF");
+      },
     });
   }
 
-  private downloadFile(data: Blob, filename?: string) {
+  private previewFile(data: Blob): void {
     const url = window.URL.createObjectURL(data);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = filename ?? "document.pdf";
-    a.click();
-    window.URL.revokeObjectURL(url);
+    window.open(url, "_blank");
   }
+
+  // as of now it will not be downloaded directly
+  // private downloadFile(data: Blob, filename?: string) {
+  //   const url = window.URL.createObjectURL(data);
+  //   const a = document.createElement("a");
+  //   a.href = url;
+  //   a.download = filename ?? "document.pdf";
+  //   a.click();
+  //   window.URL.revokeObjectURL(url);
+  // }
 }

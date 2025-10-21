@@ -32,11 +32,17 @@ export const markdown =
   "    }\n" +
   "}\n" +
   "```\n\n" +
-  "### Test cases\n" +
-  "| Feature | Input | Expected output |\n" +
-  "|---|---:|---|\n" +
-  "| Dev server | ng serve | App served at http://localhost:4200 |\n" +
-  "| Component render | <app-sample> | Button and message visible |\n" +
-  "| Code block | ```typescript``` | Syntax highlighted block |\n\n" +
-  "### link\n\n" +
-  "Visit the Angular docs: https://angular.dev";
+  "### Blockquote\n" +
+  "> This is a blockquote. It can be used to highlight a quote from another source.\n" +
+  ">\n" +
+  "> Blockquotes can also span multiple paragraphs if you wish.\n\n" +
+  "### Additional Section 1\n" +
+  "This is the first additional paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.\n\n" +
+  "### Additional Section 2\n" +
+  "This is the second additional paragraph. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat.\n\n" +
+  "### Additional Section 3\n" +
+  "This is the third additional paragraph. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue. Ut in risus volutpat libero pharetra tempor.\n\n" +
+  "### Additional Section 4\n" +
+  "This is the fourth additional paragraph. Cras vestibulum bibendum augue. Proin huius, scelerisque sed, mollis in, enim. Praesent ut ligula non mi varius sagittis. Cras id desertus.\n\n" +
+  "### Additional Section 5\n" +
+  "This is the fifth additional paragraph. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices.";

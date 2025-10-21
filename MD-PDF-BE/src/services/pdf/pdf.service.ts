@@ -17,6 +17,7 @@ import 'prismjs/components/prism-markdown.min';
 import 'prismjs/components/prism-powershell.min';
 import 'prismjs/components/prism-python.min';
 import 'prismjs/components/prism-typescript.min';
+import 'prismjs/plugins/line-numbers/prism-line-numbers';
 //as of now it will only have specific languages,
 //later, need to add a field for selecting languages
 
@@ -69,6 +70,11 @@ export class PdfService {
       <html>
         <head>
           <meta charset="utf-8" />
+          <style>
+            body { 
+                font-family: Roboto, sans-serif;
+            }
+          </style>
           <style>${prismCss}</style>
         </head>
         <body>
@@ -80,6 +86,12 @@ export class PdfService {
     const pdfBuffer = await page.pdf({
       format: 'A4',
       printBackground: true,
+      margin: {
+        top: '10mm',
+        right: '5mm',
+        bottom: '10mm',
+        left: '5mm',
+      },
     });
 
     await browser.close();
