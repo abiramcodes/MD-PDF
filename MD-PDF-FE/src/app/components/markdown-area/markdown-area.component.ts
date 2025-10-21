@@ -5,6 +5,7 @@ import { FormControl, FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { debounceTime, Subject, takeUntil } from "rxjs";
 import { MarkdownFacadeService } from "../../services/markdown-facade.service";
 import { marked } from "marked";
+import { markdown } from "../../mock/markdown.mock";
 
 @Component({
   selector: "app-markdown-area",
@@ -25,6 +26,15 @@ export class MarkdownAreaComponent implements OnInit, OnDestroy {
   private readonly unsubscribe$ = new Subject();
 
   ngOnInit(): void {
+    this.listenMarkdownChanges();
+    this.initializeControl();
+  }
+
+  private initializeControl(): void {
+    this.markDownArea.setValue(markdown);
+  }
+
+  private listenMarkdownChanges(): void {
     this.markDownArea.valueChanges
       .pipe(debounceTime(300), takeUntil(this.unsubscribe$))
       .subscribe((html: string | null) => {
