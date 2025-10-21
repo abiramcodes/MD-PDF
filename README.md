@@ -44,3 +44,8 @@ This is a solution for the "Markdown to PDF" coding challenge by John Crickett f
     ng serve
     ```
     The frontend will be running on `http://localhost:4200`.
+
+### Here is a short demo of the application:
+
+https://github.com/user-attachments/assets/bc3257cf-af2f-4982-bc08-d7c5489a6d29
+
