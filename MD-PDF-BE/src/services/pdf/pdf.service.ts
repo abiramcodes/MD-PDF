@@ -88,8 +88,8 @@ export class PdfService {
       printBackground: true,
       margin: {
         top: '10mm',
-        right: '5mm',
         bottom: '10mm',
+        right: '5mm',
         left: '5mm',
       },
     });
