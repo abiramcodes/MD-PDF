@@ -35,7 +35,7 @@ export class GeneratePDFComponent {
       },
       error: () => {
         this.pdfService.updateLoading(false);
-        this.snackbarService.openSnackbar("Error generating PDF");
+        this.snackbarService.openSnackbar("Error generating PDF", "Uh-oh");
       },
     });
   }

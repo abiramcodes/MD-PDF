@@ -39,10 +39,4 @@ export const markdown =
   "### Additional Section 1\n" +
   "This is the first additional paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.\n\n" +
   "### Additional Section 2\n" +
-  "This is the second additional paragraph. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat.\n\n" +
-  "### Additional Section 3\n" +
-  "This is the third additional paragraph. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue. Ut in risus volutpat libero pharetra tempor.\n\n" +
-  "### Additional Section 4\n" +
-  "This is the fourth additional paragraph. Cras vestibulum bibendum augue. Proin huius, scelerisque sed, mollis in, enim. Praesent ut ligula non mi varius sagittis. Cras id desertus.\n\n" +
-  "### Additional Section 5\n" +
-  "This is the fifth additional paragraph. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices.";
+  "This is the second additional paragraph. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi";

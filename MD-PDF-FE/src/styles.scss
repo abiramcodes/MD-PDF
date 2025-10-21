@@ -41,6 +41,9 @@ body {
 pre {
   overflow-x: hidden !important;
 }
+textarea {
+  overflow: hidden !important;
+}
 :root {
   --mat-toolbar-standard-height: 4rem;
   @include mat.toolbar-overrides(
