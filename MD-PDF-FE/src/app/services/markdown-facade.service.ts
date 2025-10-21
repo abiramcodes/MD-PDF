@@ -1,4 +1,5 @@
 import { computed, Injectable, signal } from "@angular/core";
+import { marked } from "marked";
 
 @Injectable({
   providedIn: "root",
@@ -8,7 +9,7 @@ export class MarkdownFacadeService {
   readonly htmlString = computed(() => this.markdownHTML());
 
   public setMarkdown(html: string): void {
-    console.log(html);
+    console.log(marked.parse(html));
     this.markdownHTML.set(html);
   }
 }

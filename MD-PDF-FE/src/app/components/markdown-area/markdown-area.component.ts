@@ -40,8 +40,6 @@ export class MarkdownAreaComponent implements OnInit, OnDestroy {
       .subscribe((html: string | null) => {
         if (html) {
           this.markdownFacadeService.setMarkdown(html);
-          // try to render this with an iFrame tag.
-          console.log(marked.parse(html));
         }
       });
   }
