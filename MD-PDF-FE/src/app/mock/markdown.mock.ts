@@ -14,21 +14,21 @@ export const markdown =
   "```\n\n" +
   "### Small Angular component example\n" +
   "```typescript\n" +
-  "import { Component } from '@angular/core';\n\n" +
+  "import { Component, signal } from '@angular/core';\n\n" +
   "@Component({\n" +
   "    selector: 'app-sample',\n" +
   "    template: `\n" +
   '        <div class="sample">\n' +
   "            <h3>Sample Component</h3>\n" +
   '            <button (click)="onClick()">Click me</button>\n' +
-  "            <p>{{ message }}</p>\n" +
+  "            <p>{{ message() }}</p>\n" +
   "        </div>\n" +
   "    `\n" +
   "})\n" +
   "export class SampleComponent {\n" +
-  "    message = 'Hello from SampleComponent';\n\n" +
+  "    message = signal('Hello from SampleComponent');\n\n" +
   "    onClick(): void {\n" +
-  "        this.message = 'Button clicked at ' + new Date().toLocaleTimeString();\n" +
+  "        this.message.set('Button clicked at ' + new Date().toLocaleTimeString());\n" +
   "    }\n" +
   "}\n" +
   "```\n\n" +
